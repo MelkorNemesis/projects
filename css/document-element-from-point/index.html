@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document.elementFromPoint Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- Main Content -->
+      <main class="main">
+        <header class="header">
+          <h1>document.elementFromPoint()</h1>
+          <p class="subtitle">Move your mouse around to see which element is detected</p>
+        </header>
+
+        <div class="info-panel">
+          <div class="info-row">
+            <span class="label">Coordinates:</span>
+            <span class="value" id="coords">(0, 0)</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Element:</span>
+            <span class="value" id="element-tag">—</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Class:</span>
+            <span class="value" id="element-class">—</span>
+          </div>
+          <div class="info-row">
+            <span class="label">ID:</span>
+            <span class="value" id="element-id">—</span>
+          </div>
+        </div>
+
+        <div class="playground">
+          <div class="box box-1" data-name="Red Box">
+            <span>Box 1</span>
+          </div>
+          <div class="box box-2" data-name="Green Box">
+            <span>Box 2</span>
+          </div>
+          <div class="box box-3" data-name="Blue Box">
+            <span>Box 3</span>
+          </div>
+          <div class="box box-4" id="special-box" data-name="Special Box">
+            <span>Box 4</span>
+            <div class="nested" data-name="Nested Element">Nested</div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <button class="btn" id="toggle-pointer">Toggle pointer-events on Box 2</button>
+        </footer>
+      </main>
+
+      <!-- Right Sidebar - Click Output -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>elementsFromPoint()</h2>
+          <p>Click anywhere to see all elements at that point</p>
+        </div>
+        <div class="click-output" id="click-output">
+          <div class="empty-state">
+            <span class="empty-icon">👆</span>
+            <span>Click anywhere to start</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

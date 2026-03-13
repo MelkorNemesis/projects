@@ -1,0 +1,72 @@
+/* =====================
+Reset / Base
+===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================
+Variables
+===================== */
+
+:root {
+  --bg: #0f172a;
+  --fg: #e5e7eb;
+  --accent: #38bdf8;
+}
+
+/* =====================
+Layout
+===================== */
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.app {
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+/* =====================
+Experiments below 👇
+===================== */
+
+.box {
+  isolation: isolate;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #333;
+  padding: 1rem;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  background: red;
+  z-index: -1;
+}
+
+.box-child {
+  width: 100%;
+  background: #666;
+  padding: 1rem;
+}

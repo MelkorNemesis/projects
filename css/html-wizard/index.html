@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Experiment</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+<!-- Controls -->
+  <input type="radio" name="wizard" id="step1" checked>
+  <input type="radio" name="wizard" id="step2">
+  <input type="radio" name="wizard" id="step3">
+
+  <div class="wizard">
+    <div class="steps">
+
+      <div class="step">
+        <h2>Step 1</h2>
+        <p>First step content</p>
+        <div class="buttons">
+          <label for="step2">Next</label>
+        </div>
+      </div>
+
+      <div class="step">
+        <h2>Step 2</h2>
+        <p>Second step content</p>
+        <div class="buttons">
+          <label for="step1">Back</label>
+          <label for="step3">Next</label>
+        </div>
+      </div>
+
+      <div class="step">
+        <h2>Step 3</h2>
+        <p>Final step content</p>
+        <div class="buttons">
+          <label for="step2">Back</label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

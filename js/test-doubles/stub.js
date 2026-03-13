@@ -1,0 +1,1 @@
+const stub = sinon.stub(weatherService, 'getWeather').returns('sunny');
