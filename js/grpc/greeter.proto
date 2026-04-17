@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package greeter;
+
+// The Greeter service exposes two RPCs:
+//   1. SayHello  – a standard unary call (one request → one response)
+//   2. SayHelloStream – a server-streaming call (one request → many responses)
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc SayHelloStream (HelloRequest) returns (stream HelloReply);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
